@@ -1,0 +1,21 @@
+
+
+/*
+ *  This is TC - DSL
+ */
+auto [timeout=60, loop=2] {
+    // start test
+    ts_shell [cmd="echo 'start test'"]
+    //ts_connect [timeout=1.5]
+    import "mtbf.tc"
+    //ts_send_data [timeout=1.5]
+    auto [duration=5] (
+        ts_hello [random]
+        ts_ping  [random=false]
+    )
+    ts_goodbye [loop=3]
+}
+
+
+
+

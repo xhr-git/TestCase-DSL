@@ -1,0 +1,7 @@
+
+auto [duration=3] (
+    ts_ping [timeout=7, loop=2, duration=5]
+    ts_hello [timeout=50]
+    ts_hello [timeout=50]
+    ts_ping [timeout=50]
+)
